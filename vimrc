@@ -152,6 +152,9 @@ let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
+"ycm
+nnoremap <leader>gt :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
 "ultisnips
 
 " Snippets are separated from the engine. Add this if you want them:
@@ -175,8 +178,15 @@ inoremap ( ()<Esc>:let leavechar=")"<CR>i
 inoremap [ []<Esc>:let leavechar="]"<CR>i
 inoremap { {}<Esc>:let leavechar="}"<CR>i
 
-inoremap <C-j><Esc>/[)}"'\]>]<CR>:nohl<CR>a
+inoremap <C-j> <Esc>/[)}"'\]>]<CR>:nohl<CR>a
+set showmatch
 
+" Easymotion
+map / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map n <Plug>(easymotion-next)
+map N <Plug>(easymotion-prev)
+let g:EasyMotion_landing_highlight = 1
 
 "All magic Functions
 
