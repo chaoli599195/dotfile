@@ -44,6 +44,7 @@ filetype plugin indent on    " required
 "
 
 " Bundles
+ Bundle 'lokaltog/vim-easymotion'
  Bundle 'tomtom/tcomment_vim'
  Bundle 'scrooloose/nerdtree'
  Bundle 'scrooloose/syntastic'
@@ -51,7 +52,8 @@ filetype plugin indent on    " required
  Bundle 'majutsushi/tagbar'
  Bundle 'sirver/ultisnips'
  Bundle 'tpope/vim-surround'
- Bundle 'terryma/vim-multiple-cursor'
+ Bundle 'terryma/vim-multiple-cursors'
+ Bundle 'altercation/vim-colors-solarized'
 
 
 
@@ -166,6 +168,14 @@ let g:UltiSnipsEditSplit="vertical"
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>se :SyntasticCheck<CR>
 nnoremap <C-w>sr :SyntasticReset<CR>
+
+"auto bracket complete
+
+inoremap ( ()<Esc>:let leavechar=")"<CR>i
+inoremap [ []<Esc>:let leavechar="]"<CR>i
+inoremap { {}<Esc>:let leavechar="}"<CR>i
+
+inoremap <C-j><Esc>/[)}"'\]>]<CR>:nohl<CR>a
 
 
 "All magic Functions
