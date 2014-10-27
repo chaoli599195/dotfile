@@ -146,8 +146,8 @@ execute pathogen#infect()
 set expandtab
 
 "multicursor
-let g:multi_cursor_use_default_mapping=0
-let g:multi_cursor_next_key='<C-m>'
+let g:multi_cursor_use_default_mapping=1
+let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
@@ -169,8 +169,8 @@ let g:UltiSnipsEditSplit="vertical"
 
 "disable auto syntastic
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-nnoremap <C-w>se :SyntasticCheck<CR>
-nnoremap <C-w>sr :SyntasticReset<CR>
+nnoremap <leader>se :SyntasticCheck<CR>
+nnoremap <leader>sr :SyntasticReset<CR>
 
 "auto bracket complete
 
