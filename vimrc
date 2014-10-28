@@ -54,6 +54,7 @@ filetype plugin indent on    " required
  Bundle 'tpope/vim-surround'
  Bundle 'terryma/vim-multiple-cursors'
  Bundle 'altercation/vim-colors-solarized'
+ Bundle 'mhinz/vim-signify'
 
 
 
@@ -113,7 +114,7 @@ filetype plugin indent on    " required
  nnoremap <silent> <F6> :NERDTreeToggle<CR>
 
  " Abbreviations
- autocmd Filetype python ab ipdb import ipdb; ipdb.set_trace()
+ autocmd Filetype python ab ipdb import ipdb; ipdb.set_trace
  autocmd Filetype python ab ifname if __name__ == '__main__':<CR>
 
  " Remap buffer movement
@@ -154,6 +155,11 @@ let g:multi_cursor_quit_key='<Esc>'
 
 "ycm
 nnoremap <leader>gt :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"set vim-signigy
+let g:signify_vcs_list = [ 'git']
+let g:signify_mapping_next_hunk = '<leader>gj'
+let g:signify_mapping_prev_hunk = '<leader>gk'
 
 "ultisnips
 
